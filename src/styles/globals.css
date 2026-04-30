@@ -1,0 +1,95 @@
+/* ─────────────────────────────────────────
+   THE BIG 2 EFFECT — Global Styles
+   ───────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --black:        #070707;
+  --deep:         #0d0d0d;
+  --card:         #131313;
+  --card2:        #181818;
+  --gold:         #c8a86b;
+  --gold-bright:  #e2c078;
+  --gold-pale:    #f0d9a8;
+  --white:        #f8f2e6;
+  --white-80:     rgba(248, 242, 230, 0.85);
+  --white-60:     rgba(248, 242, 230, 0.62);
+  --white-40:     rgba(248, 242, 230, 0.40);
+  --white-20:     rgba(248, 242, 230, 0.18);
+  --gold-line:    rgba(200, 168, 107, 0.20);
+  --gold-glow:    rgba(200, 168, 107, 0.07);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+
+  /* Spacing */
+  --section-pad:  8rem 5rem;
+  --section-pad-sm: 5rem 1.5rem;
+
+  /* Transitions */
+  --ease:         cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* ── Links ── */
+a { text-decoration: none; color: inherit; }
+
+/* ── Buttons ── */
+button { font-family: var(--font-body); cursor: pointer; border: none; outline: none; }
+
+/* ── Images ── */
+img { max-width: 100%; display: block; }
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+
+/* ── Page transition ── */
+.page-enter {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}

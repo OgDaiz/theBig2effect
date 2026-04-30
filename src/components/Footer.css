@@ -1,0 +1,117 @@
+.footer {
+  padding: 5rem 5rem 2.5rem;
+  border-top: 0.5px solid var(--gold-line);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* Brand */
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.18em;
+  margin-bottom: 3px;
+}
+
+.footer-brand-tag {
+  font-size: 0.5rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.footer-brand-desc {
+  font-size: 0.75rem;
+  line-height: 1.95;
+  color: var(--white-60);
+  margin-top: 1.5rem;
+  max-width: 230px;
+}
+
+/* Columns */
+.footer-col-label {
+  font-size: 0.54rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  font-weight: 500;
+  margin-bottom: 1.3rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-col ul li,
+.footer-col ul li a {
+  font-size: 0.77rem;
+  color: var(--white-60);
+  text-decoration: none;
+  transition: color 0.3s;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-col ul li a::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.5px;
+  background: var(--gold);
+  transition: width 0.3s;
+  flex-shrink: 0;
+}
+
+.footer-col ul li a:hover { color: var(--white); }
+.footer-col ul li a:hover::before { width: 10px; }
+
+/* Bottom */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 0.5px solid var(--gold-line);
+}
+
+.footer-copy {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--white-40);
+}
+
+.footer-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--white-40);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-tag-line {
+  display: block;
+  width: 20px;
+  height: 0.5px;
+  background: var(--gold-line);
+}
+
+/* Mobile */
+@media (max-width: 960px) {
+  .footer { padding: 4rem 1.5rem 2rem; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .footer-bottom { flex-direction: column; gap: 0.6rem; text-align: center; }
+}

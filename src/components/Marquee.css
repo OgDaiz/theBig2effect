@@ -1,0 +1,37 @@
+.marquee-strip {
+  background: var(--gold);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 600;
+  padding: 0 1.5rem;
+}
+
+.marquee-sep {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 0.65rem;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

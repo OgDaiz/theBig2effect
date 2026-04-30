@@ -1,0 +1,137 @@
+.about {
+  padding: var(--section-pad);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 7rem;
+  align-items: center;
+}
+
+/* ── Photo ── */
+.about-photo {
+  aspect-ratio: 3 / 4;
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-photo-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #141210 0%, #201c14 50%, #0f0e0c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.about-photo-icon { font-size: 2.5rem; opacity: 0.18; }
+
+.about-photo-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(200, 168, 107, 0.3);
+}
+
+/* Bracket corners */
+.bracket {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+}
+
+.bracket-tl {
+  top: 1.2rem;
+  left: 1.2rem;
+  border-top: 1px solid var(--gold);
+  border-left: 1px solid var(--gold);
+}
+
+.bracket-br {
+  bottom: 1.2rem;
+  right: 1.2rem;
+  border-bottom: 1px solid var(--gold);
+  border-right: 1px solid var(--gold);
+}
+
+/* Side gold bar */
+.about-photo-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+
+/* ── Text ── */
+.about-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.9rem);
+  font-weight: 400;
+  line-height: 1.18;
+  margin: 1rem 0 1.8rem;
+  color: var(--white);
+}
+
+.about-title em {
+  font-style: italic;
+  color: var(--gold-bright);
+}
+
+.about-body {
+  font-size: 0.86rem;
+  line-height: 2.1;
+  color: var(--white-60);
+  margin-bottom: 2.5rem;
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0.5px solid var(--gold-line);
+}
+
+.about-stat {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-right: 0.5px solid var(--gold-line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.about-stat:last-child { border-right: none; }
+
+.about-stat-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+
+.about-stat-label {
+  font-size: 0.54rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white-60);
+}
+
+/* Mobile */
+@media (max-width: 960px) {
+  .about {
+    padding: var(--section-pad-sm);
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-photo { aspect-ratio: 4 / 3; }
+}
